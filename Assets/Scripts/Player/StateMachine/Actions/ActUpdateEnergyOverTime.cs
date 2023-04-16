@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Player.StateMachine.Actions {
     public class ActUpdateEnergyOverTime : MonoBehaviour {
-        [SerializeField] private float _deltaTimeInSecods;
+        [SerializeField] private float _deltaTimeInSeconds;
         [SerializeField] private int _deltaEnergyOverTime;
         private EnergyManager _energyManager;
 
@@ -13,7 +13,7 @@ namespace Player.StateMachine.Actions {
 
         public void OnEnable() {
             _energyManager.StopAllCoroutines();
-            _energyManager.StartUpdateEnergyCO(_deltaEnergyOverTime, _deltaTimeInSecods);
+            _energyManager.StartUpdateEnergyCO(_deltaEnergyOverTime, _deltaTimeInSeconds);
         }
 
     }

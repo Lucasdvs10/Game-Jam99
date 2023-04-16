@@ -19,8 +19,8 @@ namespace Player.EnergySystem {
         
         public IEnumerator UpdateCurrentEnergyOverTimeCO(int deltaEnergy, float deltaTimeInSeconds) {
             while (true) {
-                CurrentEnergy += deltaEnergy;
                 yield return new WaitForSeconds(deltaTimeInSeconds);
+                CurrentEnergy += deltaEnergy;
             }
         }
 
