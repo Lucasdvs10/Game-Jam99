@@ -44,6 +44,5 @@ namespace PlayerMovement {
             
             _playerRgb.velocity = Vector2.zero;
         }
-        
     }
 }
