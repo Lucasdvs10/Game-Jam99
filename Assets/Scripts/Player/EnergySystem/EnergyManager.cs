@@ -7,7 +7,6 @@ namespace Player.EnergySystem {
         [SerializeField] private SOSingletonInt _maxEnergySingleton;
         [SerializeField] private SOSingletonInt _currentEnergySingleton;
         private int _currentEnergy;
-        private Coroutine _updateEnergyOverTimeCO;
 
         private void Awake() {
             _currentEnergy = _maxEnergy;
@@ -15,10 +14,7 @@ namespace Player.EnergySystem {
             _currentEnergySingleton.Value = _currentEnergy;
         }
         public void StartUpdateEnergyCO(int deltaEnergy, float updateDelayInSeconds) {
-            if (_updateEnergyOverTimeCO != null) {
-                StopAllCoroutines();
-            }
-            _updateEnergyOverTimeCO = StartCoroutine(UpdateCurrentEnergyOverTimeCO(deltaEnergy, updateDelayInSeconds));
+            StartCoroutine(UpdateCurrentEnergyOverTimeCO(deltaEnergy, updateDelayInSeconds));
         }
         
         public IEnumerator UpdateCurrentEnergyOverTimeCO(int deltaEnergy, float deltaTimeInSeconds) {
@@ -32,7 +28,7 @@ namespace Player.EnergySystem {
             get => _currentEnergy;
             set {
                 _currentEnergy = Mathf.Clamp(value, 0, _maxEnergy);
-                _currentEnergySingleton.Value = Mathf.Clamp(value, 0, _maxEnergy);
+                _currentEnergySingleton.ChangeValue(Mathf.Clamp(value, 0, _maxEnergy));
             }
         }
     }

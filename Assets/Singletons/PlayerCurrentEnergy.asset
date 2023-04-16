@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 871caf860f37433c82c48994990bb861, type: 3}
   m_Name: PlayerCurrentEnergy
   m_EditorClassIdentifier: 
-  Value: 0
+  Value: 2
