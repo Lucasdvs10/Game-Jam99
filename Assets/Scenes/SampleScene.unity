@@ -9814,6 +9814,7 @@ GameObject:
   - component: {fileID: 1907296073}
   - component: {fileID: 1907296076}
   - component: {fileID: 1907296075}
+  - component: {fileID: 1907296077}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -9882,7 +9883,7 @@ Transform:
   m_GameObject: {fileID: 1907296072}
   m_LocalRotation: {x: -0, y: -0, z: 0.37846813, w: 0.92561436}
   m_LocalPosition: {x: -4.95, y: -1.92, z: 0}
-  m_LocalScale: {x: 2.13, y: 2.13, z: 2.13}
+  m_LocalScale: {x: 2.3610506, y: 2.3610506, z: 2.3610506}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2089529755}
@@ -9927,6 +9928,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1907296077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907296072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52f8bfd95aa94f788d275b3d74d75d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxEnergy: 10
+  _updateEnergyDeltaTime: 1
+  _maxEnergySingleton: {fileID: 11400000, guid: 5722f95f644732a49bc21f04e8bfa294, type: 2}
+  _currentEnergySingleton: {fileID: 11400000, guid: bf4059d0947a3aa499afc81d6b86f5a5, type: 2}
 --- !u!1 &2089529754
 GameObject:
   m_ObjectHideFlags: 0
@@ -10066,7 +10083,31 @@ MonoBehaviour:
         m_CallState: 2
   JumpButtonPressedEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 41401101}
+        m_TargetAssemblyTypeName: PlayerMovement.PlayerMovement, Assembly-CSharp
+        m_MethodName: Jump
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   JumpButtonReleasedEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 41401101}
+        m_TargetAssemblyTypeName: PlayerMovement.PlayerMovement, Assembly-CSharp
+        m_MethodName: UnJump
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
