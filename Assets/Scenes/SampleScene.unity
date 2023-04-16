@@ -7437,7 +7437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 718120523}
   m_Layer: 0
-  m_Name: Flying
+  m_Name: Jumping
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7594,8 +7594,9 @@ GameObject:
   - component: {fileID: 1006258853}
   - component: {fileID: 1006258854}
   - component: {fileID: 1006258855}
+  - component: {fileID: 1006258856}
   m_Layer: 0
-  m_Name: Jumping
+  m_Name: Flying
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7629,7 +7630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _deltaTimeInSecods: 1
-  _deltaEnergyOverTime: -5
+  _deltaEnergyOverTime: -2
 --- !u!114 &1006258855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7658,6 +7659,18 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   IntValueSingleton: {fileID: 11400000, guid: bf4059d0947a3aa499afc81d6b86f5a5, type: 2}
+--- !u!114 &1006258856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006258852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed5ce2d4069a419d9afbba42f71b869e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1454439206
 GameObject:
   m_ObjectHideFlags: 0
