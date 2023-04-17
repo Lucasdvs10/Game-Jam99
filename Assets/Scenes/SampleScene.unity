@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 41401100}
   - component: {fileID: 41401101}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Movement_system
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7483,7 +7483,8 @@ GameObject:
   - component: {fileID: 797891493}
   - component: {fileID: 797891494}
   - component: {fileID: 797891495}
-  m_Layer: 0
+  - component: {fileID: 797891496}
+  m_Layer: 7
   m_Name: Swiming
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7534,9 +7535,10 @@ MonoBehaviour:
   OnStateEnterEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1907296075}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
+      - m_Target: {fileID: 797891496}
+        m_TargetAssemblyTypeName: Player.StateMachine.Actions.PlayerEnemyCollisionController,
+          Assembly-CSharp
+        m_MethodName: SwitchPlayerEnemyCollision
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7546,6 +7548,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &797891496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797891492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08284a66ae69453091afe6dad076009b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &802413282
 GameObject:
   m_ObjectHideFlags: 0
@@ -7556,7 +7570,7 @@ GameObject:
   m_Component:
   - component: {fileID: 802413283}
   - component: {fileID: 802413284}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: State_Machine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7602,7 +7616,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 899066223}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Submerged
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7634,7 +7648,7 @@ GameObject:
   m_Component:
   - component: {fileID: 996516879}
   - component: {fileID: 996516880}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7722,7 +7736,8 @@ GameObject:
   - component: {fileID: 1006258856}
   - component: {fileID: 1006258857}
   - component: {fileID: 1006258858}
-  m_Layer: 0
+  - component: {fileID: 1006258859}
+  m_Layer: 7
   m_Name: Flying
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7826,9 +7841,10 @@ MonoBehaviour:
   OnStateEnterEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1907296075}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
+      - m_Target: {fileID: 1006258859}
+        m_TargetAssemblyTypeName: Player.StateMachine.Actions.PlayerEnemyCollisionController,
+          Assembly-CSharp
+        m_MethodName: SwitchPlayerEnemyCollision
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7838,6 +7854,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1006258859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006258852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08284a66ae69453091afe6dad076009b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1070110185
 GameObject:
   m_ObjectHideFlags: 0
@@ -10471,7 +10499,7 @@ GameObject:
   - component: {fileID: 1907296075}
   - component: {fileID: 1907296077}
   - component: {fileID: 1907296078}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -10486,7 +10514,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1907296072}
   m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: -4, y: -2, z: 0}
+  m_LocalPosition: {x: 3.29, y: 2.89, z: 0}
   m_LocalScale: {x: 2.3610506, y: 2.3610506, z: 2.3610506}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -10662,7 +10690,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867707347953074456, guid: be622325914a4434bb19332955ab55a9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7867707347953074458, guid: be622325914a4434bb19332955ab55a9, type: 3}
       propertyPath: m_RootOrder
@@ -10826,7 +10854,7 @@ GameObject:
   - component: {fileID: 2089529755}
   - component: {fileID: 2089529756}
   - component: {fileID: 2089529757}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Input_System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10995,7 +11023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867707347953074456, guid: be622325914a4434bb19332955ab55a9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7867707347953074458, guid: be622325914a4434bb19332955ab55a9, type: 3}
       propertyPath: m_RootOrder
@@ -11056,7 +11084,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867707347953074456, guid: be622325914a4434bb19332955ab55a9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7867707347953074458, guid: be622325914a4434bb19332955ab55a9, type: 3}
       propertyPath: m_RootOrder

@@ -12,9 +12,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Obstacles-Enemies
+  - Collision-Obs-Enemies
+  - Non-Collision-Obs-Enemies
   - 
   - 
   - 
