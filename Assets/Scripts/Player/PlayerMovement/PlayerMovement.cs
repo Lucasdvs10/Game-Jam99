@@ -9,6 +9,7 @@ namespace PlayerMovement {
         private bool _playerCanMove = true;
         private Rigidbody2D _playerRgb;
         private Transform _playerTransform;
+        private bool _playerIsTriyngToMove;
 
         private void Awake() {
             _playerRgb = GetComponentInParent<Rigidbody2D>();
@@ -55,12 +56,18 @@ namespace PlayerMovement {
             }
         }
         
-        public void StopPlayerMovement() {
+        public void ApplyInertiaIfFlagIsOn() {
             if(_mantainInertia) return;
             
             _playerRgb.velocity = Vector2.zero;
         }
 
+        public void StopPlayerMovement() {
+            if(!_playerIsTriyngToMove)
+                _playerRgb.velocity = Vector2.zero;
+        }
+
+        public void SetPlayerIsTryingToMoveFlag(bool newValue) => _playerIsTriyngToMove = newValue;
         public void SetPlayerCanMoveFlag(bool newValue) => _playerCanMove = newValue;
         public void SetMantainInertiaFlag(bool newValue) => _mantainInertia = newValue;
     }

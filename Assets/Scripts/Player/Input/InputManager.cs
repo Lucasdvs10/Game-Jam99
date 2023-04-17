@@ -8,6 +8,8 @@ namespace Input {
         public UnityEvent<Vector2> MovementButtonReleasedEvent;
         public UnityEvent JumpButtonPressedEvent;
         public UnityEvent JumpButtonReleasedEvent;
+        public UnityEvent ShiftButtonPressedEvent;
+        public UnityEvent ShiftButtonReleasedEvent;
         
         public void ReadMovementKeys(InputAction.CallbackContext ctx) {
             if (ctx.performed) {
@@ -27,6 +29,13 @@ namespace Input {
             if (ctx.canceled) {
                 JumpButtonReleasedEvent.Invoke();
             }
+        }
+
+        public void ReadSubmergeKeys(InputAction.CallbackContext ctx) {
+            if (ctx.performed)
+                ShiftButtonPressedEvent.Invoke();
+            if (ctx.canceled)
+                ShiftButtonReleasedEvent.Invoke();
         }
     }
 }

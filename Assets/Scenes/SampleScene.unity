@@ -168,7 +168,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerMovementSpeed: 1.8
-  _mantainInertia: 1
   _spriteTransform: {fileID: 996516879}
 --- !u!1 &150696703
 GameObject:
@@ -7484,6 +7483,7 @@ GameObject:
   - component: {fileID: 797891494}
   - component: {fileID: 797891495}
   - component: {fileID: 797891496}
+  - component: {fileID: 797891497}
   m_Layer: 7
   m_Name: Swiming
   m_TagString: Untagged
@@ -7519,7 +7519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _deltaTimeInSeconds: 1
-  _deltaEnergyOverTime: 1
+  _deltaEnergyOverTime: -5
 --- !u!114 &797891495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7572,18 +7572,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 41401101}
-        m_TargetAssemblyTypeName: PlayerMovement.PlayerMovement, Assembly-CSharp
-        m_MethodName: StopPlayerMovement
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &797891496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7596,6 +7584,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08284a66ae69453091afe6dad076009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &797891497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797891492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fd1241816d743088a781ee595838f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ValueIsZeroOrLessEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 802413284}
+        m_TargetAssemblyTypeName: Player.StateMachine.StateManager, Assembly-CSharp
+        m_MethodName: ChangeState
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 899066223}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  IntValueSingleton: {fileID: 11400000, guid: bf4059d0947a3aa499afc81d6b86f5a5, type: 2}
 --- !u!1 &802413282
 GameObject:
   m_ObjectHideFlags: 0
@@ -7652,6 +7668,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 899066223}
+  - component: {fileID: 899066224}
+  - component: {fileID: 899066225}
+  - component: {fileID: 899066226}
   m_Layer: 7
   m_Name: Submerged
   m_TagString: Untagged
@@ -7674,6 +7693,75 @@ Transform:
   m_Father: {fileID: 802413283}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &899066224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899066222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d68e73a7a8974cccbf9f7e4288e62852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _deltaTimeInSeconds: 1
+  _deltaEnergyOverTime: 2
+--- !u!114 &899066225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899066222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d5bc845871a43a8bd49ca6de6c887c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ValueIsBiggerThanZeroEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 802413284}
+        m_TargetAssemblyTypeName: Player.StateMachine.StateManager, Assembly-CSharp
+        m_MethodName: ChangeState
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 797891493}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  IntValueSingleton: {fileID: 11400000, guid: bf4059d0947a3aa499afc81d6b86f5a5, type: 2}
+--- !u!114 &899066226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899066222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba1cf084f98d48cb8affa1d15f70ad6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnStateEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 41401101}
+        m_TargetAssemblyTypeName: PlayerMovement.PlayerMovement, Assembly-CSharp
+        m_MethodName: SetMantainInertiaFlag
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &996516878
 GameObject:
   m_ObjectHideFlags: 0
@@ -7701,7 +7789,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.38268343, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.67296, y: 0.67296, z: 0.67296}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1907296074}
   m_RootOrder: 0
@@ -7770,9 +7858,9 @@ GameObject:
   - component: {fileID: 1006258854}
   - component: {fileID: 1006258855}
   - component: {fileID: 1006258856}
-  - component: {fileID: 1006258857}
   - component: {fileID: 1006258858}
   - component: {fileID: 1006258859}
+  - component: {fileID: 1006258860}
   m_Layer: 7
   m_Name: Flying
   m_TagString: Untagged
@@ -7808,7 +7896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _deltaTimeInSeconds: 1
-  _deltaEnergyOverTime: -1
+  _deltaEnergyOverTime: -2
 --- !u!114 &1006258855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7824,12 +7912,24 @@ MonoBehaviour:
   ValueIsZeroOrLessEvent:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 41401101}
+        m_TargetAssemblyTypeName: PlayerMovement.PlayerMovement, Assembly-CSharp
+        m_MethodName: StopPlayerMovement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 802413284}
         m_TargetAssemblyTypeName: Player.StateMachine.StateManager, Assembly-CSharp
         m_MethodName: ChangeState
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 797891493}
+          m_ObjectArgument: {fileID: 899066223}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -7849,19 +7949,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed5ce2d4069a419d9afbba42f71b869e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1006258857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1006258852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b07adb735c342d5ba724450ed0144af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deltaValueOnEnable: -1
 --- !u!114 &1006258858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7926,6 +8013,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08284a66ae69453091afe6dad076009b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1006258860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006258852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b07adb735c342d5ba724450ed0144af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deltaValueOnEnable: -1
 --- !u!1 &1070110185
 GameObject:
   m_ObjectHideFlags: 0
@@ -10562,7 +10662,7 @@ GameObject:
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -10574,7 +10674,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1907296072}
   m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: 3.29, y: 2.89, z: 0}
+  m_LocalPosition: {x: -1.73, y: -0.41, z: 0}
   m_LocalScale: {x: 2.3610506, y: 2.3610506, z: 2.3610506}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -10993,6 +11093,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 55a56796-e1ba-46f9-b608-d0b50f5857a7
     m_ActionName: PlayerMap/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2089529757}
+        m_TargetAssemblyTypeName: Input.InputManager, Assembly-CSharp
+        m_MethodName: ReadSubmergeKeys
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 398919c0-02d4-4d6f-aa12-7277d4956b1c
+    m_ActionName: PlayerMap/Submerge[/Keyboard/shift]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerMap
@@ -11025,13 +11141,37 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 41401101}
+        m_TargetAssemblyTypeName: PlayerMovement.PlayerMovement, Assembly-CSharp
+        m_MethodName: SetPlayerIsTryingToMoveFlag
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   MovementButtonReleasedEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 41401101}
         m_TargetAssemblyTypeName: PlayerMovement.PlayerMovement, Assembly-CSharp
-        m_MethodName: StopPlayerMovement
+        m_MethodName: ApplyInertiaIfFlagIsOn
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 41401101}
+        m_TargetAssemblyTypeName: PlayerMovement.PlayerMovement, Assembly-CSharp
+        m_MethodName: SetPlayerIsTryingToMoveFlag
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11069,6 +11209,74 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 41401101}
+        m_TargetAssemblyTypeName: PlayerMovement.PlayerMovement, Assembly-CSharp
+        m_MethodName: StopPlayerMovement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ShiftButtonPressedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 802413284}
+        m_TargetAssemblyTypeName: Player.StateMachine.StateManager, Assembly-CSharp
+        m_MethodName: ChangeState
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 899066223}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 899066225}
+        m_TargetAssemblyTypeName: Player.StateMachine.Triggers.TriggIntValueIsBiggerThanZero,
+          Assembly-CSharp
+        m_MethodName: SetTriggerIsOnFlag
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ShiftButtonReleasedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 802413284}
+        m_TargetAssemblyTypeName: Player.StateMachine.StateManager, Assembly-CSharp
+        m_MethodName: ChangeState
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 797891493}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 899066225}
+        m_TargetAssemblyTypeName: Player.StateMachine.Triggers.TriggIntValueIsBiggerThanZero,
+          Assembly-CSharp
+        m_MethodName: SetTriggerIsOnFlag
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!1001 &2094563703
 PrefabInstance:
