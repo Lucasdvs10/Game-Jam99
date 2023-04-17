@@ -19,8 +19,8 @@ namespace PlayerMovement {
         public void MovePlayer(Vector2 direction) {
             if(!_playerCanMove)
                 return;
-            
-            _playerRgb.velocity = _playerTransform.localToWorldMatrix * (direction * _playerMovementSpeed);
+
+            _playerRgb.velocity = (_playerTransform.localToWorldMatrix * direction).normalized * _playerMovementSpeed;
             RotateSprite(direction);
         }
 
