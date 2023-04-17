@@ -29,19 +29,26 @@ namespace PlayerMovement {
             else if (direction == Vector2.right)
                 _spriteTransform.localRotation = Quaternion.Euler(0, 0, -45f);
             
-            else if (direction == Vector2.left)
-                _spriteTransform.localRotation = Quaternion.Euler(0, 0, -45f);
-            
-            // else if () {
-            //     _spriteTransform.localRotation = Quaternion.LookRotation(Vector3.forward, new Vector3(-0.71f, 0.71f));
-            //     print(transform.up);
-            // }
-            
-            // else if (direction.x == 0.71 || direction.x != -0.71) //Não sei pq não está funcionando
-                // _spriteTransform.localRotation = Quaternion.Euler(0,0,14f);
-            
-            // if (direction == new Vector2(0.71f,-0.71f))
-            //     // _spriteTransform.localRotation = Quaternion.Euler(0,0,-45f);
+            else if (direction == Vector2.left) 
+                _spriteTransform.localRotation = Quaternion.Euler(0,180,-30);
+
+            else {
+                var stringDirectionX = direction.x.ToString("0.00");
+                var stringDirectionY = direction.y.ToString("0.00");
+
+                if (stringDirectionX == "0,71" && stringDirectionY == "0,71")
+                    _spriteTransform.localRotation = Quaternion.Euler(0,0,14f);
+                
+                else if (stringDirectionX == "0,71" && stringDirectionY == "-0,71")
+                    _spriteTransform.localRotation = Quaternion.Euler(0,0,-78f);
+                
+                if (stringDirectionX == "-0,71" && stringDirectionY == "0,71")
+                    _spriteTransform.localRotation = Quaternion.Euler(0,180,-5f);
+                
+                else if (stringDirectionX == "-0,71" && stringDirectionY == "-0,71")
+                    _spriteTransform.localRotation = Quaternion.Euler(0,0,180);
+                
+            }
         }
         
         public void StopPlayerMovement() {

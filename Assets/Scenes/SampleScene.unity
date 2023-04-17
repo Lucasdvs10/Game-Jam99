@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 277cb302fbbd4e2aa46f9b7ede9642be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerMovementSpeed: 2
+  _playerMovementSpeed: 1.8
   _mantainInertia: 0
   _spriteTransform: {fileID: 996516879}
 --- !u!1 &150696703
