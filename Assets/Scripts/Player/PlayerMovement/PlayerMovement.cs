@@ -3,9 +3,10 @@
 namespace PlayerMovement {
     public class PlayerMovement : MonoBehaviour {
         [SerializeField] float _playerMovementSpeed;
-        [SerializeField] private bool _mantainInertia;
         [SerializeField] private Transform _spriteTransform;
-        
+
+        private bool _mantainInertia;
+        private bool _playerCanMove = true;
         private Rigidbody2D _playerRgb;
         private Transform _playerTransform;
 
@@ -15,6 +16,9 @@ namespace PlayerMovement {
         }
 
         public void MovePlayer(Vector2 direction) {
+            if(!_playerCanMove)
+                return;
+            
             _playerRgb.velocity = _playerTransform.localToWorldMatrix * (direction * _playerMovementSpeed);
             RotateSprite(direction);
         }
@@ -56,5 +60,8 @@ namespace PlayerMovement {
             
             _playerRgb.velocity = Vector2.zero;
         }
+
+        public void SetPlayerCanMoveFlag(bool newValue) => _playerCanMove = newValue;
+        public void SetMantainInertiaFlag(bool newValue) => _mantainInertia = newValue;
     }
 }
