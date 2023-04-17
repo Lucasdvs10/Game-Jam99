@@ -21,22 +21,27 @@ namespace PlayerMovement {
 
         public void RotateSprite(Vector2 direction) {
             if (direction == Vector2.up)
-                _spriteTransform.localRotation = Quaternion.Euler(0, 0, 90f);
+                _spriteTransform.localRotation = Quaternion.Euler(0,-180,45);
             
-            if (direction == Vector2.down)
-                _spriteTransform.localRotation = Quaternion.Euler(0, 0, -90f);
+            else if (direction == Vector2.down)
+                _spriteTransform.localRotation = Quaternion.Euler(0, 0, -102f);
             
-            if (direction == Vector2.right)
-                _spriteTransform.localRotation = Quaternion.Euler(0, 0, 0f);
+            else if (direction == Vector2.right)
+                _spriteTransform.localRotation = Quaternion.Euler(0, 0, -45f);
             
-            if (direction == Vector2.left)
-                _spriteTransform.localRotation = Quaternion.Euler(0, 0, 0f);
+            else if (direction == Vector2.left)
+                _spriteTransform.localRotation = Quaternion.Euler(0, 0, -45f);
             
-            // if (direction == new Vector2(0.71f, 0.71f)) Não sei pq não está funcionando
-            //     _spriteTransform.localRotation = Quaternion.Euler(0,0,45f);
-            //
+            // else if () {
+            //     _spriteTransform.localRotation = Quaternion.LookRotation(Vector3.forward, new Vector3(-0.71f, 0.71f));
+            //     print(transform.up);
+            // }
+            
+            // else if (direction.x == 0.71 || direction.x != -0.71) //Não sei pq não está funcionando
+                // _spriteTransform.localRotation = Quaternion.Euler(0,0,14f);
+            
             // if (direction == new Vector2(0.71f,-0.71f))
-            //     _spriteTransform.localRotation = Quaternion.Euler(0,0,-45f);
+            //     // _spriteTransform.localRotation = Quaternion.Euler(0,0,-45f);
         }
         
         public void StopPlayerMovement() {
