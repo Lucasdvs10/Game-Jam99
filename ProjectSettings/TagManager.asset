@@ -13,10 +13,10 @@ TagManager:
   - Water
   - UI
   - Obstacles-Enemies
-  - Collision-Obs-Enemies
-  - Non-Collision-Obs-Enemies
-  - 
-  - 
+  - Obstacles-Enemies-Submerse
+  - Flying
+  - Submerse
+  - Swiming
   - 
   - 
   - 

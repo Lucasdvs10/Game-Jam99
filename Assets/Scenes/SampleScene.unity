@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 41401100}
   - component: {fileID: 41401101}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Movement_system
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7484,7 +7484,7 @@ GameObject:
   - component: {fileID: 797891495}
   - component: {fileID: 797891496}
   - component: {fileID: 797891497}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Swiming
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7539,11 +7539,11 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: Player.StateMachine.Actions.PlayerEnemyCollisionController,
           Assembly-CSharp
         m_MethodName: SwitchPlayerEnemyCollision
-        m_Mode: 6
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 10
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
@@ -7622,7 +7622,7 @@ GameObject:
   m_Component:
   - component: {fileID: 802413283}
   - component: {fileID: 802413284}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: State_Machine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7672,7 +7672,8 @@ GameObject:
   - component: {fileID: 899066225}
   - component: {fileID: 899066226}
   - component: {fileID: 899066227}
-  m_Layer: 7
+  - component: {fileID: 899066228}
+  m_Layer: 10
   m_Name: Submerged
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7763,6 +7764,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 899066228}
+        m_TargetAssemblyTypeName: Player.StateMachine.Actions.PlayerEnemyCollisionController,
+          Assembly-CSharp
+        m_MethodName: SwitchPlayerEnemyCollision
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 9
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &899066227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7775,6 +7789,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbbfce7bc8b94d6d9c44d3e21179232a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &899066228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899066222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08284a66ae69453091afe6dad076009b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &996516878
 GameObject:
   m_ObjectHideFlags: 0
@@ -7785,7 +7811,7 @@ GameObject:
   m_Component:
   - component: {fileID: 996516879}
   - component: {fileID: 996516880}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7874,7 +7900,7 @@ GameObject:
   - component: {fileID: 1006258858}
   - component: {fileID: 1006258859}
   - component: {fileID: 1006258860}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Flying
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7981,11 +8007,11 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: Player.StateMachine.Actions.PlayerEnemyCollisionController,
           Assembly-CSharp
         m_MethodName: SwitchPlayerEnemyCollision
-        m_Mode: 6
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 8
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -10672,7 +10698,7 @@ GameObject:
   - component: {fileID: 1907296075}
   - component: {fileID: 1907296077}
   - component: {fileID: 1907296078}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
@@ -10687,7 +10713,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1907296072}
   m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: -1.73, y: -0.41, z: 0}
+  m_LocalPosition: {x: -3.88, y: -2.41, z: 0}
   m_LocalScale: {x: 2.3610506, y: 2.3610506, z: 2.3610506}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -10863,7 +10889,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867707347953074456, guid: be622325914a4434bb19332955ab55a9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7867707347953074458, guid: be622325914a4434bb19332955ab55a9, type: 3}
       propertyPath: m_RootOrder
@@ -11027,7 +11053,7 @@ GameObject:
   - component: {fileID: 2089529755}
   - component: {fileID: 2089529756}
   - component: {fileID: 2089529757}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Input_System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11304,7 +11330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867707347953074456, guid: be622325914a4434bb19332955ab55a9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7867707347953074458, guid: be622325914a4434bb19332955ab55a9, type: 3}
       propertyPath: m_RootOrder
@@ -11364,12 +11390,44 @@ PrefabInstance:
       value: Obstaculo
       objectReference: {fileID: 0}
     - target: {fileID: 7867707347953074456, guid: be622325914a4434bb19332955ab55a9, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867707347953074456, guid: be622325914a4434bb19332955ab55a9, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867707347953074457, guid: be622325914a4434bb19332955ab55a9, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8323953
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867707347953074457, guid: be622325914a4434bb19332955ab55a9, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867707347953074457, guid: be622325914a4434bb19332955ab55a9, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867707347953074457, guid: be622325914a4434bb19332955ab55a9, type: 3}
+      propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7867707347953074458, guid: be622325914a4434bb19332955ab55a9, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867707347953074458, guid: be622325914a4434bb19332955ab55a9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.48820397
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867707347953074458, guid: be622325914a4434bb19332955ab55a9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.71185553
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867707347953074458, guid: be622325914a4434bb19332955ab55a9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.50503
       objectReference: {fileID: 0}
     - target: {fileID: 7867707347953074458, guid: be622325914a4434bb19332955ab55a9, type: 3}
       propertyPath: m_LocalPosition.x
