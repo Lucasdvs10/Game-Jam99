@@ -1,4 +1,5 @@
-﻿using Player.EnergySystem;
+﻿using System;
+using Player.EnergySystem;
 using UnityEngine;
 
 namespace Player.StateMachine.Actions {
@@ -16,5 +17,8 @@ namespace Player.StateMachine.Actions {
             _energyManager.StartUpdateEnergyCO(_deltaEnergyOverTime, _deltaTimeInSeconds);
         }
 
+        private void OnDisable() {
+            _energyManager.StopAllCoroutines();
+        }
     }
 }
