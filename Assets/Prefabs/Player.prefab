@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 8070328269608142610}
   - component: {fileID: 8070328269608142621}
   - component: {fileID: 8070328269608142620}
+  - component: {fileID: 1632652091}
   m_Layer: 10
   m_Name: Swiming
   m_TagString: Untagged
@@ -133,6 +134,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8070328270353082296}
+        m_TargetAssemblyTypeName: PlayerMovement.PlayerMovement, Assembly-CSharp
+        m_MethodName: MovePlayerToDirectionBuffer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1632652091}
+        m_TargetAssemblyTypeName: Player.StateMachine.Actions.ChangeSpriteLayerPriority,
+          Assembly-CSharp
+        m_MethodName: SetPriorityValueOnLayers
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8070328269608142621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,6 +199,18 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   IntValueSingleton: {fileID: 11400000, guid: bf4059d0947a3aa499afc81d6b86f5a5, type: 2}
+--- !u!114 &1632652091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8070328269608142609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d82d0cf624d455aa77a66bd8c8d138a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8070328269932738747
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,7 +283,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 5e3129981569f9d4489f3af05d88f28f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -272,6 +310,7 @@ GameObject:
   - component: {fileID: 8070328269942937119}
   - component: {fileID: 8070328269942937118}
   - component: {fileID: 8070328269942937113}
+  - component: {fileID: 1227244114}
   m_Layer: 10
   m_Name: Flying
   m_TagString: Untagged
@@ -412,6 +451,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1227244114}
+        m_TargetAssemblyTypeName: Player.StateMachine.Actions.ChangeSpriteLayerPriority,
+          Assembly-CSharp
+        m_MethodName: SetPriorityValueOnLayers
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 20
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8070328269942937118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -437,6 +489,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deltaValueOnEnable: -1
+--- !u!114 &1227244114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8070328269942937105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d82d0cf624d455aa77a66bd8c8d138a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8070328269977761243
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,9 +512,10 @@ GameObject:
   - component: {fileID: 8070328269977761242}
   - component: {fileID: 8070328269977761221}
   - component: {fileID: 8070328269977761220}
-  - component: {fileID: 8070328269977761223}
   - component: {fileID: 8070328269977761222}
   - component: {fileID: 8070328269977761217}
+  - component: {fileID: 1919446430}
+  - component: {fileID: 8070328269977761223}
   m_Layer: 10
   m_Name: Submerged
   m_TagString: Untagged
@@ -515,6 +580,42 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   IntValueSingleton: {fileID: 11400000, guid: bf4059d0947a3aa499afc81d6b86f5a5, type: 2}
+--- !u!114 &8070328269977761222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8070328269977761243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbbfce7bc8b94d6d9c44d3e21179232a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8070328269977761217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8070328269977761243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08284a66ae69453091afe6dad076009b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1919446430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8070328269977761243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d82d0cf624d455aa77a66bd8c8d138a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8070328269977761223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -555,30 +656,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8070328269977761222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8070328269977761243}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbbfce7bc8b94d6d9c44d3e21179232a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8070328269977761217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8070328269977761243}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08284a66ae69453091afe6dad076009b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+      - m_Target: {fileID: 1919446430}
+        m_TargetAssemblyTypeName: Player.StateMachine.Actions.ChangeSpriteLayerPriority,
+          Assembly-CSharp
+        m_MethodName: SetPriorityValueOnLayers
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8070328270353082302
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,6 +865,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 8070328270353082296}
+        m_TargetAssemblyTypeName: PlayerMovement.PlayerMovement, Assembly-CSharp
+        m_MethodName: SetDirectionBuffer
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   MovementButtonReleasedEvent:
     m_PersistentCalls:
       m_Calls:
@@ -794,6 +896,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: PlayerMovement.PlayerMovement, Assembly-CSharp
         m_MethodName: SetPlayerIsTryingToMoveFlag
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8070328270353082296}
+        m_TargetAssemblyTypeName: PlayerMovement.PlayerMovement, Assembly-CSharp
+        m_MethodName: SetDirectionBuffer
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
