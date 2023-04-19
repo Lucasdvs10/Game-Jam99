@@ -14,9 +14,9 @@ TagManager:
   - UI
   - Obstacles-Enemies
   - Obstacles-Enemies-Submerse
-  - Flying
-  - Submerse
-  - Swiming
+  - Player-Flying
+  - Player-Submerse
+  - Player-Swiming
   - Camera
   - 
   - 
