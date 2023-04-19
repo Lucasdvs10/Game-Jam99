@@ -27219,6 +27219,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8070328269608142610, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: OnStateEnterEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070328269608142610, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: OnStateEnterEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070328269608142610, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: OnStateEnterEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1902206538}
+    - target: {fileID: 8070328269608142610, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: OnStateEnterEvent.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070328269608142610, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: OnStateEnterEvent.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: MovePlayerToDirectionBuffer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070328269608142610, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: OnStateEnterEvent.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: PlayerMovement.PlayerMovement, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070328269608142610, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: OnStateEnterEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8070328270933732648, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
       propertyPath: MovementButtonPressedEvent.m_PersistentCalls.m_Calls.Array.size
       value: 3

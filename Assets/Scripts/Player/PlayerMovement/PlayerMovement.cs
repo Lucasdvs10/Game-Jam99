@@ -26,6 +26,11 @@ namespace PlayerMovement {
         }
 
         public void MovePlayerToDirectionBuffer() {
+            if (_playerTransform == null || _playerRgb == null) {
+                // var message = _playerRgb == null ? "O rgb do player é nulo!" : "O transform do player é nulo!";
+                // print(message);
+                return;
+            }
             _playerRgb.velocity = (_playerTransform.localToWorldMatrix * _directionBuffer).normalized * _playerMovementSpeed;
             RotateSprite(_directionBuffer);
         }
