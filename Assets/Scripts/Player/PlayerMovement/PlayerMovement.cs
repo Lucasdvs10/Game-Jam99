@@ -10,6 +10,7 @@ namespace PlayerMovement {
         private Rigidbody2D _playerRgb;
         private Transform _playerTransform;
         private bool _playerIsTriyngToMove;
+        private Vector2 _directionBuffer;
 
         private void Awake() {
             _playerRgb = GetComponentInParent<Rigidbody2D>();
@@ -23,6 +24,12 @@ namespace PlayerMovement {
             _playerRgb.velocity = (_playerTransform.localToWorldMatrix * direction).normalized * _playerMovementSpeed;
             RotateSprite(direction);
         }
+
+        public void MovePlayerToDirectionBuffer() {
+            _playerRgb.velocity = (_playerTransform.localToWorldMatrix * _directionBuffer).normalized * _playerMovementSpeed;
+            RotateSprite(_directionBuffer);
+        }
+
 
         public void RotateSprite(Vector2 direction) {
             if (direction == Vector2.up)
@@ -70,5 +77,6 @@ namespace PlayerMovement {
         public void SetPlayerIsTryingToMoveFlag(bool newValue) => _playerIsTriyngToMove = newValue;
         public void SetPlayerCanMoveFlag(bool newValue) => _playerCanMove = newValue;
         public void SetMantainInertiaFlag(bool newValue) => _mantainInertia = newValue;
+        public void SetDirectionBuffer(Vector2 direction) => _directionBuffer = direction;
     }
 }
