@@ -5,7 +5,11 @@ namespace Player.StateMachine.Actions {
         private SpriteRenderer _spriteRenderer;
         
         private void Awake() {
-            _spriteRenderer = transform.parent.parent.GetComponentInChildren<SpriteRenderer>();
+            
+            if(transform.parent != null)
+                _spriteRenderer = transform.parent.parent.GetComponentInChildren<SpriteRenderer>();
+            else
+                _spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
         public void SetNewSprite(Sprite newSprite) {
