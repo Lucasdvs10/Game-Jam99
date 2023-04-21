@@ -4,14 +4,15 @@ using UnityEngine;
 namespace Player.EnergySystem {
     public class EnergyManager : MonoBehaviour {
         [SerializeField] private int _maxEnergy;
+        [SerializeField] private int _initialEnergy;
         [SerializeField] private SOSingletonInt _maxEnergySingleton;
         [SerializeField] private SOSingletonInt _currentEnergySingleton;
         private int _currentEnergy;
 
         private void Awake() {
-            _currentEnergy = _maxEnergy;
+            CurrentEnergy = _initialEnergy;
             _maxEnergySingleton.Value = _maxEnergy;
-            _currentEnergySingleton.Value = _currentEnergy;
+            _currentEnergySingleton.Value = CurrentEnergy;
         }
         public void StartUpdateEnergyCO(int deltaEnergy, float updateDelayInSeconds) {
             StartCoroutine(UpdateCurrentEnergyOverTimeCO(deltaEnergy, updateDelayInSeconds));

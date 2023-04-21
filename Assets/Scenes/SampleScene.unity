@@ -48986,10 +48986,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 210
       objectReference: {fileID: 0}
-    - target: {fileID: 4469564346218130076, guid: e0a3c184e9a73d94daf64678ed2dd7df, type: 3}
-      propertyPath: OnStateEnterEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0a3c184e9a73d94daf64678ed2dd7df, type: 3}
 --- !u!1 &1328290445
@@ -84958,27 +84954,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1742842967 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5033899414447340176, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
-  m_PrefabInstance: {fileID: 8070328270321065141}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1742842972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1742842967}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 046ce2f8efba4ec9b5dae3ded3f5e73e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _numberOfHitsToUnblockTransition: 2
-  UnblockStateTransitionEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!4 &1907296074 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8070328271120145407, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
@@ -85423,62 +85398,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1334208200694455600, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
-      propertyPath: OnStateEnterEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1334208200694455600, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
-      propertyPath: OnStateEnterEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1334208200694455600, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
-      propertyPath: OnStateEnterEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1742842972}
-    - target: {fileID: 1334208200694455600, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
-      propertyPath: OnStateEnterEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1334208200694455600, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
-      propertyPath: OnStateEnterEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: BlockStateTransition
-      objectReference: {fileID: 0}
-    - target: {fileID: 1334208200694455600, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
-      propertyPath: OnStateEnterEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: Player.StateMachine.Actions.StateTransitionBlocker, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1334208200694455600, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
-      propertyPath: OnStateEnterEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8070328270933732648, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
-      propertyPath: JumpButtonPressedEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8070328270933732648, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
-      propertyPath: JumpButtonPressedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8070328270933732648, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
-      propertyPath: JumpButtonPressedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1742842972}
-    - target: {fileID: 8070328270933732648, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
-      propertyPath: JumpButtonPressedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8070328270933732648, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
-      propertyPath: JumpButtonPressedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: AddOneToHitsCounter
-      objectReference: {fileID: 0}
-    - target: {fileID: 8070328270933732648, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
-      propertyPath: JumpButtonPressedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: Player.StateMachine.Actions.StateTransitionBlocker, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8070328270933732648, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
-      propertyPath: JumpButtonPressedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 8070328271120145403, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
       propertyPath: OnCollisionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
