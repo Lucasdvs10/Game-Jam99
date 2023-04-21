@@ -193,7 +193,7 @@ Transform:
   m_Children:
   - {fileID: 1937275904}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &117878542
 MonoBehaviour:
@@ -252,7 +252,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &203690287
 GameObject:
@@ -298,7 +298,7 @@ Transform:
   - {fileID: 1454439207}
   - {fileID: 507976499}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &238682290 stripped
 GameObject:
@@ -23427,7 +23427,7 @@ RectTransform:
   m_Children:
   - {fileID: 2060063424}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -48720,13 +48720,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cobra
       objectReference: {fileID: 0}
+    - target: {fileID: 2698096095930968866, guid: 377ed7c05c0909f4aa24630ecf565e71, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2698096095930968869, guid: 377ed7c05c0909f4aa24630ecf565e71, type: 3}
       propertyPath: DelayInSecondsBetweenPlayerEnterAndPlayerQuit
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2698096095930968870, guid: 377ed7c05c0909f4aa24630ecf565e71, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2698096095930968870, guid: 377ed7c05c0909f4aa24630ecf565e71, type: 3}
       propertyPath: m_LocalPosition.x
@@ -48774,6 +48778,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 377ed7c05c0909f4aa24630ecf565e71, type: 3}
+--- !u!114 &1248372074 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4915250518698702396, guid: 8140ddf22824e434fb17e3804638e797, type: 3}
+  m_PrefabInstance: {fileID: 4915250517531136854}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899293c4cd204fb8a9a38bad5b94689c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1328290445
 GameObject:
   m_ObjectHideFlags: 0
@@ -85058,7 +85073,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1907296074 stripped
 Transform:
@@ -85411,9 +85426,49 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4915250518698702395, guid: 8140ddf22824e434fb17e3804638e797, type: 3}
+      propertyPath: PlayerEnteredAreaEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915250518698702395, guid: 8140ddf22824e434fb17e3804638e797, type: 3}
+      propertyPath: PlayerEnteredAreaEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915250518698702395, guid: 8140ddf22824e434fb17e3804638e797, type: 3}
+      propertyPath: PlayerEnteredAreaEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1248372074}
+    - target: {fileID: 4915250518698702395, guid: 8140ddf22824e434fb17e3804638e797, type: 3}
+      propertyPath: PlayerEnteredAreaEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915250518698702395, guid: 8140ddf22824e434fb17e3804638e797, type: 3}
+      propertyPath: PlayerEnteredAreaEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: StartActivateSprintCO
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915250518698702395, guid: 8140ddf22824e434fb17e3804638e797, type: 3}
+      propertyPath: PlayerEnteredAreaEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Enemies.Aligator.MovementAI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915250518698702395, guid: 8140ddf22824e434fb17e3804638e797, type: 3}
+      propertyPath: PlayerEnteredAreaEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915250518698702395, guid: 8140ddf22824e434fb17e3804638e797, type: 3}
+      propertyPath: PlayerEnteredAreaEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915250518698702396, guid: 8140ddf22824e434fb17e3804638e797, type: 3}
+      propertyPath: _sprintSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915250518698702396, guid: 8140ddf22824e434fb17e3804638e797, type: 3}
+      propertyPath: ChasePlayerOnStart
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4915250518698702399, guid: 8140ddf22824e434fb17e3804638e797, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4915250518698702399, guid: 8140ddf22824e434fb17e3804638e797, type: 3}
       propertyPath: m_LocalPosition.x
@@ -85474,7 +85529,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8070328271120145407, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8070328271120145407, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
       propertyPath: m_LocalPosition.x

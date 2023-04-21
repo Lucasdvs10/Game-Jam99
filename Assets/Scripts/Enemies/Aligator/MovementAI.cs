@@ -8,6 +8,7 @@ namespace Enemies.Aligator {
         private NavMeshAgent _agent;
         private Vector3 _playerPosition;
         private bool _isChasingPlayer;
+        public bool ChasePlayerOnStart;
 
 
         [Header("Modo normal")] 
@@ -23,6 +24,8 @@ namespace Enemies.Aligator {
             _agent.updateUpAxis = false;
 
             _agent.speed = _normalSpeed;
+
+            _isChasingPlayer = ChasePlayerOnStart;
         }
 
         [ContextMenu("Mover até a posicao atual do player")]

@@ -22,17 +22,17 @@ namespace Enemies {
             if (other.CompareTag("Player") && (LayerMask.value & 1 << other.gameObject.layer) > 0) {
                 StopAllCoroutines();
                 PlayerQuittedAreaEvent.Invoke();
-                print("Player saiu da área");
+                // print("Player saiu da área");
             }
         }
 
         private IEnumerator DetectPlayerCO(float delayInSeconds) {
             PlayerEnteredAreaEvent.Invoke();
-            print("Player entrou");
+            // print("Player entrou");
             
             yield return new WaitForSeconds(delayInSeconds);
             
-            print("Player ainda está na área mesmo depois do delay");
+            // print("Player ainda está na área mesmo depois do delay");
             PlayerIsInAreaAfterDelayEvent.Invoke();
         }
         
