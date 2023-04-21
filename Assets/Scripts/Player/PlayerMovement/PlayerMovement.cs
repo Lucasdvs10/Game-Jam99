@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Enemies.Bird;
+using UnityEngine;
 
 namespace PlayerMovement {
     public class PlayerMovement : MonoBehaviour {
@@ -12,9 +13,19 @@ namespace PlayerMovement {
         private bool _playerIsTriyngToMove;
         private Vector2 _directionBuffer;
 
+        private bool _isMovingWithBird;
+        private Rigidbody2D _birdRgb;
+
         private void Awake() {
             _playerRgb = GetComponentInParent<Rigidbody2D>();
             _playerTransform = _playerRgb.transform;
+            _birdRgb = FindObjectOfType<BirdMovement>()?.GetComponent<Rigidbody2D>();
+        }
+
+        private void Update() {
+            if (_isMovingWithBird && _birdRgb)
+                _playerRgb.velocity = _birdRgb.velocity;
+
         }
 
         public void MovePlayer(Vector2 direction) {
@@ -83,5 +94,8 @@ namespace PlayerMovement {
         public void SetPlayerCanMoveFlag(bool newValue) => _playerCanMove = newValue;
         public void SetMantainInertiaFlag(bool newValue) => _mantainInertia = newValue;
         public void SetDirectionBuffer(Vector2 direction) => _directionBuffer = direction;
+
+        public void SetFollowBirdFlag(bool newValue) => _isMovingWithBird = newValue;
+        public float PlayerMovementSpeed => (_playerMovementSpeed * _directionBuffer).x;
     }
 }
