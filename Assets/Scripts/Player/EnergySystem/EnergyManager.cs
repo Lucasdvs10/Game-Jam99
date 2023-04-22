@@ -7,6 +7,9 @@ namespace Player.EnergySystem {
         [SerializeField] private int _initialEnergy;
         [SerializeField] private SOSingletonInt _maxEnergySingleton;
         [SerializeField] private SOSingletonInt _currentEnergySingleton;
+        [SerializeField] private float _holdBreathDurationInSeconds;
+        private float _currentBreathTimer;
+        private bool _isHoldingBreath;
         private int _currentEnergy;
 
         private void Awake() {
@@ -18,12 +21,34 @@ namespace Player.EnergySystem {
             StartCoroutine(UpdateCurrentEnergyOverTimeCO(deltaEnergy, updateDelayInSeconds));
         }
         
-        public IEnumerator UpdateCurrentEnergyOverTimeCO(int deltaEnergy, float deltaTimeInSeconds) {
+        private IEnumerator UpdateCurrentEnergyOverTimeCO(int deltaEnergy, float deltaTimeInSeconds) {
             while (true) {
                 yield return new WaitForSeconds(deltaTimeInSeconds);
-                CurrentEnergy += deltaEnergy;
+                if (!_isHoldingBreath) {
+                    CurrentEnergy += deltaEnergy;
+                }
             }
         }
+
+        private IEnumerator HoldingBreathTimer() {
+            while (true) {
+                _currentBreathTimer--;
+                yield return new WaitForSeconds(1);
+
+                if (_currentBreathTimer <= 0) {
+                    SetHoldingBreathFlag(false);
+                    break;
+                }
+            }
+        }
+
+        public void SetHoldingBreathFlag(bool newValue) {
+          _isHoldingBreath = newValue;
+          if (_isHoldingBreath) {
+              _currentBreathTimer = _holdBreathDurationInSeconds;
+              StartCoroutine(HoldingBreathTimer());
+          }
+        } 
 
         public int CurrentEnergy {
             get => _currentEnergy;

@@ -329,7 +329,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 117878539}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.535549, y: 5.352962, z: -10}
+  m_LocalPosition: {x: 12.445549, y: 5.892962, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -518,6 +518,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30}
+--- !u!114 &384041420 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8070328270933732648, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+  m_PrefabInstance: {fileID: 8070328270321065141}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f454b1a53447429fb26ea14a83687deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &507976498
 GameObject:
   m_ObjectHideFlags: 0
@@ -23372,7 +23383,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.959178, y: 5.75352, z: -10}
+  m_LocalPosition: {x: 11.978484, y: 6.21757, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -48851,6 +48862,11 @@ MonoBehaviour:
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!4 &1132524320 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8070328269608142608, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+  m_PrefabInstance: {fileID: 8070328270321065141}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1228536215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -84959,6 +84975,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8070328271120145407, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
   m_PrefabInstance: {fileID: 8070328270321065141}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1907296077 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8070328271120145400, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+  m_PrefabInstance: {fileID: 8070328270321065141}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52f8bfd95aa94f788d275b3d74d75d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1931866265
 GameObject:
   m_ObjectHideFlags: 0
@@ -85398,6 +85425,118 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8070328269942937106, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: ValueIsZeroOrLessEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1132524320}
+    - target: {fileID: 8070328270933732648, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: CtrlButtonPressedEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070328270933732648, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: CtrlButtonReleasedEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070328270933732648, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: CtrlButtonPressedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070328270933732648, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: CtrlButtonReleasedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070328270933732648, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: CtrlButtonPressedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1907296077}
+    - target: {fileID: 8070328270933732648, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: CtrlButtonReleasedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1907296077}
+    - target: {fileID: 8070328270933732648, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: CtrlButtonPressedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070328270933732648, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: CtrlButtonPressedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetHoldingBreathFlag
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070328270933732648, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: CtrlButtonReleasedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070328270933732648, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: CtrlButtonReleasedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetHoldingBreathFlag
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070328270933732648, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: CtrlButtonPressedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Player.EnergySystem.EnergyManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070328270933732648, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: CtrlButtonReleasedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Player.EnergySystem.EnergyManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070328270933732648, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: CtrlButtonPressedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070328270933732648, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: CtrlButtonPressedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070328270933732648, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: CtrlButtonReleasedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070328270933732649, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070328270933732649, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionId
+      value: 7f3b6619-0073-4600-a6ee-edbab5103f67
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070328270933732649, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionName
+      value: PlayerMap/Hold_Breath[/Keyboard/ctrl]
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070328270933732649, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070328270933732649, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070328270933732649, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 384041420}
+    - target: {fileID: 8070328270933732649, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070328270933732649, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReadHoldBreathKey
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070328270933732649, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Input.InputManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070328270933732649, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070328271120145400, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: _initialEnergy
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8070328271120145400, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: _holdBreathDurationInSeconds
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8070328271120145403, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
       propertyPath: OnCollisionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -85412,11 +85551,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8070328271120145407, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.66
+      value: 4.57
       objectReference: {fileID: 0}
     - target: {fileID: 8070328271120145407, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.63
+      value: 2.17
       objectReference: {fileID: 0}
     - target: {fileID: 8070328271120145407, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
       propertyPath: m_LocalPosition.z

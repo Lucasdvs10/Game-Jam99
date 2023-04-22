@@ -10,6 +10,8 @@ namespace Input {
         public UnityEvent JumpButtonReleasedEvent;
         public UnityEvent ShiftButtonPressedEvent;
         public UnityEvent ShiftButtonReleasedEvent;
+        public UnityEvent CtrlButtonPressedEvent;
+        public UnityEvent CtrlButtonReleasedEvent;
         
         public void ReadMovementKeys(InputAction.CallbackContext ctx) {
             if (ctx.performed) {
@@ -36,6 +38,13 @@ namespace Input {
                 ShiftButtonPressedEvent.Invoke();
             if (ctx.canceled)
                 ShiftButtonReleasedEvent.Invoke();
+        }
+        
+        public void ReadHoldBreathKey(InputAction.CallbackContext ctx) {
+            if (ctx.performed)
+                CtrlButtonPressedEvent.Invoke();
+            if (ctx.canceled)
+                CtrlButtonReleasedEvent.Invoke();
         }
     }
 }
