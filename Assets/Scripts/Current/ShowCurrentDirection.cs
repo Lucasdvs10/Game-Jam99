@@ -10,12 +10,9 @@ namespace Current {
                 _effector2D = GetComponentInParent<AreaEffector2D>();
                 _collider2D = _effector2D.GetComponent<BoxCollider2D>();
             }
-            
             transform.localRotation = Quaternion.Euler(0,0,_effector2D.forceAngle - 90);
             
-            var offset = _collider2D.offset;
             
-            Gizmos.DrawWireCube(_collider2D.transform.position + (new Vector3(offset.x, offset.y, 0)), _collider2D.size);
         }
     }
 }
