@@ -13,6 +13,7 @@ namespace Current {
         private void OnDrawGizmos() {
             if (transform.childCount < 1) {
                 _directionReference = new GameObject("Direcao Correnteza");
+                _directionReference.transform.position = transform.position;
                 _directionReference.transform.parent = transform;
             }
             
