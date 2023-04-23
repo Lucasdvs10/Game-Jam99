@@ -180,6 +180,7 @@ GameObject:
   - component: {fileID: 8070328269608142620}
   - component: {fileID: 1632652091}
   - component: {fileID: 1632652092}
+  - component: {fileID: 1759124709}
   m_Layer: 10
   m_Name: Swiming
   m_TagString: Untagged
@@ -315,6 +316,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1759124709}
+        m_TargetAssemblyTypeName: Player.StateMachine.Actions.ActUpdateEnergyOverTime,
+          Assembly-CSharp
+        m_MethodName: InitializeCoroutine
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &8070328269608142621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -367,6 +381,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21a26f16de846a69af76013764041fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1759124709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8070328269608142609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d68e73a7a8974cccbf9f7e4288e62852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _deltaTimeInSeconds: 1
+  _deltaEnergyOverTime: -2
 --- !u!1 &8070328269932738747
 GameObject:
   m_ObjectHideFlags: 0
@@ -1401,7 +1429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52f8bfd95aa94f788d275b3d74d75d6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxEnergy: 100
+  _maxEnergy: 10
   _initialEnergy: 0
   _maxEnergySingleton: {fileID: 11400000, guid: 5722f95f644732a49bc21f04e8bfa294, type: 2}
   _currentEnergySingleton: {fileID: 11400000, guid: bf4059d0947a3aa499afc81d6b86f5a5, type: 2}
@@ -1430,7 +1458,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Fase01
+          m_StringArgument: Fase02
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!70 &3711580050572020250

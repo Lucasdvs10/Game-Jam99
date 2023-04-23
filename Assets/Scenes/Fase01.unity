@@ -619,7 +619,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8070328271120145400, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
       propertyPath: _initialEnergy
-      value: 20
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8070328271120145405, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
       propertyPath: m_Name
