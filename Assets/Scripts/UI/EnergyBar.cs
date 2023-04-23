@@ -22,7 +22,6 @@ namespace UI {
 
         public void UpdateBarValue() {
             _barImage.fillAmount = ((float)_currentValueSingleton.Value / (float)_maxValueSingleton.Value);
-            print( ((float)_currentValueSingleton.Value / (float)_maxValueSingleton.Value));
         }
     }
 }

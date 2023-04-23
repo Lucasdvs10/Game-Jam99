@@ -20,9 +20,8 @@ namespace Player.StateMachine {
                     state.gameObject.SetActive(false);
                     CurrentState = state;
                 }
-                else
-                    state.gameObject.SetActive(true);
             }
+            nextState.gameObject.SetActive(true);
         } 
     }
 }

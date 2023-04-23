@@ -1,5 +1,4 @@
-﻿using System;
-using Player.EnergySystem;
+﻿using Player.EnergySystem;
 using UnityEngine;
 
 namespace Player.StateMachine.Actions {
