@@ -48689,6 +48689,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cobra
       objectReference: {fileID: 0}
+    - target: {fileID: 2698096095930968869, guid: 377ed7c05c0909f4aa24630ecf565e71, type: 3}
+      propertyPath: PlayerIsInAreaAfterDelayEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698096095930968869, guid: 377ed7c05c0909f4aa24630ecf565e71, type: 3}
+      propertyPath: PlayerIsInAreaAfterDelayEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698096095930968869, guid: 377ed7c05c0909f4aa24630ecf565e71, type: 3}
+      propertyPath: PlayerIsInAreaAfterDelayEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2115060110}
+    - target: {fileID: 2698096095930968869, guid: 377ed7c05c0909f4aa24630ecf565e71, type: 3}
+      propertyPath: PlayerIsInAreaAfterDelayEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Attack
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698096095930968869, guid: 377ed7c05c0909f4aa24630ecf565e71, type: 3}
+      propertyPath: PlayerIsInAreaAfterDelayEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Enemies.Snake.SnakeAttack, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698096095930968869, guid: 377ed7c05c0909f4aa24630ecf565e71, type: 3}
+      propertyPath: PlayerIsInAreaAfterDelayEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698096095930968869, guid: 377ed7c05c0909f4aa24630ecf565e71, type: 3}
+      propertyPath: PlayerIsInAreaAfterDelayEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2698096095930968870, guid: 377ed7c05c0909f4aa24630ecf565e71, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -48733,7 +48761,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 28
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2698096095930968873, guid: 377ed7c05c0909f4aa24630ecf565e71, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 377ed7c05c0909f4aa24630ecf565e71, type: 3}
 --- !u!1001 &1297427975
 PrefabInstance:
@@ -85090,6 +85119,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxValueSingleton: {fileID: 11400000, guid: 5722f95f644732a49bc21f04e8bfa294, type: 2}
   _currentValueSingleton: {fileID: 11400000, guid: bf4059d0947a3aa499afc81d6b86f5a5, type: 2}
+  _barImage: {fileID: 0}
+--- !u!114 &2115060110 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2698096095930968872, guid: 377ed7c05c0909f4aa24630ecf565e71, type: 3}
+  m_PrefabInstance: {fileID: 1228536215}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72931f59f0fd44a49ed4cc278a061363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4915250517531136854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -85219,6 +85260,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 379029978234655301, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8070328271120145403, guid: e90c4b6fb5009f54aaa46e2a5eaecd61, type: 3}
       propertyPath: OnCollisionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
