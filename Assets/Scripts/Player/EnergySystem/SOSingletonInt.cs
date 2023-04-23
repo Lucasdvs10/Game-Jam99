@@ -7,6 +7,10 @@ namespace Player.EnergySystem {
         public int Value;
         private Action _valueHasBeenChangedEvent;
 
+        private void OnEnable() {
+            _valueHasBeenChangedEvent = null;
+        }
+
         public void ChangeValue(int newValue) {
             Value = newValue;
             _valueHasBeenChangedEvent?.Invoke();
