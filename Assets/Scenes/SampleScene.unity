@@ -85105,6 +85105,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jacare
       objectReference: {fileID: 0}
+    - target: {fileID: 4915250518698702385, guid: 8140ddf22824e434fb17e3804638e797, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4915250518698702399, guid: 8140ddf22824e434fb17e3804638e797, type: 3}
       propertyPath: m_RootOrder
       value: 6

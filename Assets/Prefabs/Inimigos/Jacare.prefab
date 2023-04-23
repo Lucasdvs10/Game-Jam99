@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 899293c4cd204fb8a9a38bad5b94689c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChasePlayerOnStart: 1
+  ChasePlayerOnStart: 0
   _normalSpeed: 1
   _sprintDurationInSeconds: 2
   _sprintSpeed: 3
