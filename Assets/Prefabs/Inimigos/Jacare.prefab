@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4915250517085807674}
   - component: {fileID: 4915250517085807672}
   - component: {fileID: 4915250517085807673}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlayerKiller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,13 +110,13 @@ GameObject:
   - component: {fileID: 4915250518698702396}
   - component: {fileID: 4915250518698702395}
   - component: {fileID: 4915250518698702394}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Jacare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4915250518698702399
 Transform:
   m_ObjectHideFlags: 0
