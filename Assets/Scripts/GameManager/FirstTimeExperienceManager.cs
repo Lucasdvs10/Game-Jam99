@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 namespace GameManager {
     [RequireComponent(typeof(CheckIfItsFirstTimePlaying))]
@@ -6,6 +7,7 @@ namespace GameManager {
         [SerializeField] private SpriteRenderer _spriteRendererBackground;
         [SerializeField] private Sprite _firstTimePlayingSprite;
         [SerializeField] private Sprite _defaultSprite;
+        public UnityEvent FirstTimeExpIsOver;
         private CheckIfItsFirstTimePlaying _checkIfItsFirstTime;
 
         private bool[] FirstTimeChecksArray = {false, false, false, false, false, false, false};
@@ -27,24 +29,34 @@ namespace GameManager {
         }
 
         public void VerifyIfFirstTimeExperienceIsOver() {
-            _spriteRendererBackground.sprite = _firstTimePlayingSprite;
-            
             foreach (var check in FirstTimeChecksArray) {
                 if (!check) {
+                    _spriteRendererBackground.sprite = _firstTimePlayingSprite;
                     return;
                 }
             }
             
+            FirstTimeExpIsOver.Invoke();
             _spriteRendererBackground.sprite = _defaultSprite;
         }
 
         private void Start() {
             if (!_checkIfItsFirstTime.Check()) {
+                print("teste");
                 _spriteRendererBackground.sprite = _defaultSprite;
+
+                for (var i = 0; i< FirstTimeChecksArray.Length; i++) {
+                    FirstTimeChecksArray[i] = true;
+                }
             }
             
             else
                 VerifyIfFirstTimeExperienceIsOver();
+        }
+
+        [ContextMenu("Limpar as player prefs")]
+        public void CleanPlayerPrefs() {
+            PlayerPrefs.DeleteAll();
         }
     }
 }
