@@ -1,12 +1,13 @@
-﻿using UnityEngine;
+﻿using UnityEditor.Animations;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace GameManager {
     [RequireComponent(typeof(CheckIfItsFirstTimePlaying))]
     public class FirstTimeExperienceManager : MonoBehaviour {
-        [SerializeField] private SpriteRenderer _spriteRendererBackground;
-        [SerializeField] private Sprite _firstTimePlayingSprite;
-        [SerializeField] private Sprite _defaultSprite;
+        [SerializeField] private Animator _animator;
+        [SerializeField] private AnimatorController _firstTimePlayingSprite;
+        [SerializeField] private AnimatorController _defaultSprite;
         public UnityEvent FirstTimeExpIsOver;
         private CheckIfItsFirstTimePlaying _checkIfItsFirstTime;
 
@@ -31,19 +32,19 @@ namespace GameManager {
         public void VerifyIfFirstTimeExperienceIsOver() {
             foreach (var check in FirstTimeChecksArray) {
                 if (!check) {
-                    _spriteRendererBackground.sprite = _firstTimePlayingSprite;
+                    _animator.runtimeAnimatorController = _firstTimePlayingSprite;
                     return;
                 }
             }
             
             FirstTimeExpIsOver.Invoke();
-            _spriteRendererBackground.sprite = _defaultSprite;
+            _animator.runtimeAnimatorController = _defaultSprite;
         }
 
         private void Start() {
             if (!_checkIfItsFirstTime.Check()) {
                 print("teste");
-                _spriteRendererBackground.sprite = _defaultSprite;
+                _animator.runtimeAnimatorController = _defaultSprite;
 
                 for (var i = 0; i< FirstTimeChecksArray.Length; i++) {
                     FirstTimeChecksArray[i] = true;
