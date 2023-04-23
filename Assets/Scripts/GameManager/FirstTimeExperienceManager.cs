@@ -10,7 +10,7 @@ namespace GameManager {
         public UnityEvent FirstTimeExpIsOver;
         private CheckIfItsFirstTimePlaying _checkIfItsFirstTime;
 
-        private bool[] FirstTimeChecksArray = {false, false, false, false, false, false, false};
+        private bool[] FirstTimeChecksArray = {false, false, false, false, false, false };
         
         private void Awake() {
             _checkIfItsFirstTime = GetComponent<CheckIfItsFirstTimePlaying>();
@@ -22,10 +22,10 @@ namespace GameManager {
         }
 
         public void UpdateFirstTimeChecksArray(Vector2 direction) {
-            if(direction == Vector2.up) UpdateFirstTimeChecksArray(3);
-            if(direction == Vector2.down) UpdateFirstTimeChecksArray(4);
-            if(direction == Vector2.right) UpdateFirstTimeChecksArray(5);
-            if(direction == Vector2.left) UpdateFirstTimeChecksArray(6);
+            if(direction == Vector2.up) UpdateFirstTimeChecksArray(2);
+            if(direction == Vector2.down) UpdateFirstTimeChecksArray(3);
+            if(direction == Vector2.right) UpdateFirstTimeChecksArray(4);
+            if(direction == Vector2.left) UpdateFirstTimeChecksArray(5);
         }
 
         public void VerifyIfFirstTimeExperienceIsOver() {
