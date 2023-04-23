@@ -12,6 +12,8 @@ namespace Input {
         public UnityEvent ShiftButtonReleasedEvent;
         public UnityEvent CtrlButtonPressedEvent;
         public UnityEvent CtrlButtonReleasedEvent;
+        public UnityEvent MButtonPressedEvent;
+        public UnityEvent MButtonReleasedEvent;
         
         public void ReadMovementKeys(InputAction.CallbackContext ctx) {
             if (ctx.performed) {
@@ -45,6 +47,14 @@ namespace Input {
                 CtrlButtonPressedEvent.Invoke();
             if (ctx.canceled)
                 CtrlButtonReleasedEvent.Invoke();
+        }
+        
+        
+        public void ReadToggleMuteKey(InputAction.CallbackContext ctx) {
+            if (ctx.performed)
+                MButtonPressedEvent.Invoke();
+            if (ctx.canceled)
+                MButtonReleasedEvent.Invoke();
         }
     }
 }
