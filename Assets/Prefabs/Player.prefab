@@ -316,11 +316,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1759124709}
-        m_TargetAssemblyTypeName: Player.StateMachine.Actions.ActUpdateEnergyOverTime,
-          Assembly-CSharp
-        m_MethodName: InitializeCoroutine
-        m_Mode: 1
+      - m_Target: {fileID: 158449646}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -405,6 +404,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8070328269932738746}
   - component: {fileID: 8070328269932738725}
+  - component: {fileID: 158449646}
   m_Layer: 10
   m_Name: Sprite
   m_TagString: Untagged
@@ -419,14 +419,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8070328269932738747}
-  m_LocalRotation: {x: 0, y: 0, z: -0.38268343, w: 0.92387956}
+  m_LocalRotation: {x: 0, y: 0, z: -0.258819, w: 0.9659259}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.67296, y: 0.67296, z: 0.67296}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8070328271120145407}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -30}
 --- !u!212 &8070328269932738725
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -468,7 +468,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: 21300000, guid: 6faeef7850ad38d4d8adb16673accdc3, type: 3}
+  m_Sprite: {fileID: 1208895280, guid: 7180848698d3d88429cee00dc809f564, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -479,6 +479,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &158449646
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8070328269932738747}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ae360e48b62a8fb40a66104f5d8ec250, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8070328269942937105
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,6 +620,18 @@ MonoBehaviour:
   OnStateEnterEvent:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 158449646}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 8070328269942937118}
         m_TargetAssemblyTypeName: Player.StateMachine.Actions.PlayerEnemyCollisionController,
           Assembly-CSharp
@@ -939,6 +972,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 158449646}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1919446431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1104,10 +1149,14 @@ MonoBehaviour:
     m_ActionId: 398919c0-02d4-4d6f-aa12-7277d4956b1c
     m_ActionName: PlayerMap/Submerge[/Keyboard/shift]
   - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7f3b6619-0073-4600-a6ee-edbab5103f67
+    m_ActionName: PlayerMap/Hold_Breath[/Keyboard/ctrl]
+  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8070328270933732648}
         m_TargetAssemblyTypeName: Input.InputManager, Assembly-CSharp
-        m_MethodName: ReadHoldBreathKey
+        m_MethodName: ReadToggleMuteKey
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1117,8 +1166,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 7f3b6619-0073-4600-a6ee-edbab5103f67
-    m_ActionName: PlayerMap/Hold_Breath[/Keyboard/ctrl]
+    m_ActionId: d22321e5-ed0d-492d-af1d-4b4b8d25be2a
+    m_ActionName: PlayerMap/Mute_Sound[/Keyboard/m]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerMap
@@ -1355,6 +1404,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  MButtonPressedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UI.MuteButton, Assembly-CSharp
+        m_MethodName: ToggleMuteButon
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 379029978234655301}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioListener, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  MButtonReleasedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8070328271120145405
 GameObject:
   m_ObjectHideFlags: 0

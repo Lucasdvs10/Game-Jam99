@@ -14,7 +14,9 @@ namespace Input {
         public UnityEvent CtrlButtonReleasedEvent;
         public UnityEvent MButtonPressedEvent;
         public UnityEvent MButtonReleasedEvent;
-        
+        public UnityEvent EscButtonPressedEvent;
+        public UnityEvent EscButtonReleasedEvent;
+
         public void ReadMovementKeys(InputAction.CallbackContext ctx) {
             if (ctx.performed) {
                 MovementButtonPressedEvent.Invoke(ctx.ReadValue<Vector2>());
@@ -55,6 +57,13 @@ namespace Input {
                 MButtonPressedEvent.Invoke();
             if (ctx.canceled)
                 MButtonReleasedEvent.Invoke();
+        }
+        
+        public void ReadPauseGameKey(InputAction.CallbackContext ctx) {
+            if (ctx.performed)
+                EscButtonPressedEvent.Invoke();
+            if (ctx.canceled)
+                EscButtonReleasedEvent.Invoke();
         }
     }
 }
