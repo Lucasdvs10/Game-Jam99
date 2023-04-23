@@ -285,7 +285,7 @@ MonoBehaviour:
         m_MethodName: SetNewSprite
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 6faeef7850ad38d4d8adb16673accdc3, type: 3}
+          m_ObjectArgument: {fileID: 21300000, guid: 96a11c7780cc6264ab9ad6d78612ecb5, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -468,7 +468,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: 1208895280, guid: 7180848698d3d88429cee00dc809f564, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0bcb4487aed3645418b0ed2aca23973e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -687,7 +687,7 @@ MonoBehaviour:
         m_MethodName: SetNewSprite
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 6faeef7850ad38d4d8adb16673accdc3, type: 3}
+          m_ObjectArgument: {fileID: 21300000, guid: 96a11c7780cc6264ab9ad6d78612ecb5, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -1224,6 +1224,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GameManager.FirstTimeExperienceManager, Assembly-CSharp
+        m_MethodName: UpdateFirstTimeChecksArray
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   MovementButtonReleasedEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1291,6 +1303,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GameManager.FirstTimeExperienceManager, Assembly-CSharp
+        m_MethodName: UpdateFirstTimeChecksArray
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   JumpButtonReleasedEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1346,6 +1370,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GameManager.FirstTimeExperienceManager, Assembly-CSharp
+        m_MethodName: UpdateFirstTimeChecksArray
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   ShiftButtonReleasedEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1389,6 +1425,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GameManager.FirstTimeExperienceManager, Assembly-CSharp
+        m_MethodName: UpdateFirstTimeChecksArray
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   CtrlButtonReleasedEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1422,6 +1470,12 @@ MonoBehaviour:
   MButtonReleasedEvent:
     m_PersistentCalls:
       m_Calls: []
+  EscButtonPressedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  EscButtonReleasedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8070328271120145405
 GameObject:
   m_ObjectHideFlags: 0
@@ -1453,7 +1507,7 @@ Transform:
   m_GameObject: {fileID: 8070328271120145405}
   m_LocalRotation: {x: 0, y: 0, z: 0.2588191, w: 0.9659258}
   m_LocalPosition: {x: 0.25, y: 0.65, z: 0}
-  m_LocalScale: {x: 2.3610506, y: 2.3610506, z: 2.3610506}
+  m_LocalScale: {x: 1.7349709, y: 1.7349709, z: 1.7349709}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8070328269932738746}
@@ -1497,7 +1551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxEnergy: 10
-  _initialEnergy: 0
+  _initialEnergy: 100
   _maxEnergySingleton: {fileID: 11400000, guid: 5722f95f644732a49bc21f04e8bfa294, type: 2}
   _currentEnergySingleton: {fileID: 11400000, guid: bf4059d0947a3aa499afc81d6b86f5a5, type: 2}
   _holdBreathDurationInSeconds: 2
