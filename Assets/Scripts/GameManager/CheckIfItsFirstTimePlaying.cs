@@ -5,7 +5,7 @@ namespace GameManager {
 
         public bool Check() {
             if (PlayerPrefs.GetInt("FIRSTTIMEOPENING", 1) == 1) {
-                PlayerPrefs.SetInt("FIRSTTIMEOPENING", 0);
+                PlayerPrefs.SetInt("FIRSTTIMEOPENING", 1);
 
                 return true;
 

@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5200302106007528030}
   - component: {fileID: 5200302106007528029}
-  - component: {fileID: 5200302106007528031}
   - component: {fileID: 5200302106007528024}
+  - component: {fileID: 4370240139640788917}
   m_Layer: 0
   m_Name: "\xC1rea de correnteza"
   m_TagString: Untagged
@@ -55,32 +55,6 @@ AreaEffector2D:
   m_ForceTarget: 0
   m_Drag: 0
   m_AngularDrag: 0
---- !u!61 &5200302106007528031
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5200302106007528003}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 1
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.061195374, y: -2.2811527}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
-    newSize: {x: 1.28, y: 1.28}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 5.15596, y: 8.446218}
-  m_EdgeRadius: 0
 --- !u!114 &5200302106007528024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,6 +67,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b3d5b7ba09449cb470244e315b4f82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!60 &4370240139640788917
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5200302106007528003}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 1}
+      - {x: -0.95105654, y: 0.30901697}
+      - {x: -0.5877852, y: -0.80901706}
+      - {x: 0.58778536, y: -0.80901694}
 --- !u!1 &6844423202746360302
 GameObject:
   m_ObjectHideFlags: 0

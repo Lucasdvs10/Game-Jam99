@@ -22,7 +22,6 @@ namespace GameManager {
 
         public void UpdateFirstTimeChecksArray(int index) {
             FirstTimeChecksArray[index] = true;
-            print($"Deixando essa porra true: {index}");
             VerifyIfFirstTimeExperienceIsOver();
         }
 
@@ -42,7 +41,6 @@ namespace GameManager {
         public void VerifyIfFirstTimeExperienceIsOver() {
             foreach (var check in FirstTimeChecksArray) {
                 if (!check) {
-                    print("Dentro do for");
                     return;
                 }
             }
@@ -56,6 +54,7 @@ namespace GameManager {
                 for (var i = 0; i< FirstTimeChecksArray.Length; i++) {
                     FirstTimeChecksArray[i] = true;
                 }
+                _animator.Play("Aquario_Aberto");
             }
             
             else
