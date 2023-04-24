@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.IO;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace GameManager {
@@ -63,7 +64,8 @@ namespace GameManager {
 
         [ContextMenu("Limpar as player prefs")]
         public void CleanPlayerPrefs() {
-            PlayerPrefs.DeleteAll();
+            string path = Application.dataPath + $"/JaJogou.json";
+            File.Delete(path);
         }
     }
 }
