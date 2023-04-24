@@ -1,13 +1,10 @@
-﻿using UnityEditor.Animations;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
 namespace GameManager {
     [RequireComponent(typeof(CheckIfItsFirstTimePlaying))]
     public class FirstTimeExperienceManager : MonoBehaviour {
         [SerializeField] private Animator _animator;
-        [SerializeField] private AnimatorController _firstTimePlayingSprite;
-        [SerializeField] private AnimatorController _defaultSprite;
         public UnityEvent FirstTimeExpIsOver;
         public UnityEvent FirstTimeArrowsIsOver;
         public UnityEvent FirstTimeShiftIsOver;
@@ -19,9 +16,13 @@ namespace GameManager {
         private void Awake() {
             _checkIfItsFirstTime = GetComponent<CheckIfItsFirstTimePlaying>();
         }
+        
+        
+      
 
         public void UpdateFirstTimeChecksArray(int index) {
             FirstTimeChecksArray[index] = true;
+            print($"Deixando essa porra true: {index}");
             VerifyIfFirstTimeExperienceIsOver();
         }
 
@@ -41,20 +42,17 @@ namespace GameManager {
         public void VerifyIfFirstTimeExperienceIsOver() {
             foreach (var check in FirstTimeChecksArray) {
                 if (!check) {
-                    _animator.runtimeAnimatorController = _firstTimePlayingSprite;
+                    print("Dentro do for");
                     return;
                 }
             }
             
             FirstTimeExpIsOver.Invoke();
-            _animator.runtimeAnimatorController = _defaultSprite;
+            _animator.Play("Aquario_Aberto");
         }
 
         private void Start() {
             if (!_checkIfItsFirstTime.Check()) {
-                print("teste");
-                _animator.runtimeAnimatorController = _defaultSprite;
-
                 for (var i = 0; i< FirstTimeChecksArray.Length; i++) {
                     FirstTimeChecksArray[i] = true;
                 }

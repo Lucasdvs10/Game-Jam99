@@ -24,14 +24,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2595029753234061402}
-  m_LocalRotation: {x: 0.696414, y: 0.7176403, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -0.44162536}
+  m_LocalRotation: {x: 0.6031122, y: 0.6214947, z: 0.35882014, w: -0.348207}
+  m_LocalPosition: {x: 4.74, y: -0.17, z: 1.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2698096095930968870}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 180, y: 0, z: -91.72}
+  m_LocalEulerAnglesHint: {x: 240, y: 0, z: -91.72}
 --- !u!212 &4863987461115947225
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 310aad561c512bd43b64d012ceacfd02, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -94,7 +94,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2698096095930968870}
   - component: {fileID: 2698096095930968869}
-  - component: {fileID: 2698096095930968873}
   - component: {fileID: 2698096095930968872}
   - component: {fileID: 238682297}
   m_Layer: 7
@@ -142,18 +141,6 @@ MonoBehaviour:
   PlayerIsInAreaAfterDelayEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2698096095930968873}
-        m_TargetAssemblyTypeName: Player.StateMachine.Actions.ChangeSprite, Assembly-CSharp
-        m_MethodName: SetNewSprite
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 2698096095930968872}
         m_TargetAssemblyTypeName: Enemies.Snake.SnakeAttack, Assembly-CSharp
         m_MethodName: Attack
@@ -169,18 +156,6 @@ MonoBehaviour:
   PlayerQuittedAreaEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2698096095930968873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2698096095930968866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a21a26f16de846a69af76013764041fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2698096095930968872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,7 +181,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.3244965}
+  m_Offset: {x: 3.0508633, y: 2.9501853}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.28866667}
@@ -217,5 +192,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 3.2263265}
+  m_Size: {x: 3.8149176, y: 2.3438082}
   m_EdgeRadius: 0

@@ -612,8 +612,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 453950998}
-  _firstTimePlayingSprite: {fileID: 9100000, guid: 528e20e80f7d48344bf46cc038c8645d, type: 2}
-  _defaultSprite: {fileID: 9100000, guid: 23b030d19e6847f41b18a8d946b736b6, type: 2}
   FirstTimeExpIsOver:
     m_PersistentCalls:
       m_Calls:

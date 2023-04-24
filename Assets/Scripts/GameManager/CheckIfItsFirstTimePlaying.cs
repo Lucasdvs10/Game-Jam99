@@ -13,7 +13,7 @@ namespace GameManager {
 
             return false;
 
-            return true;
+            // return true;
         }
 
     }
